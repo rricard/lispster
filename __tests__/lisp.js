@@ -4,7 +4,7 @@ jest.dontMock("..");
 var lispster = require("..");
 var lisp = lispster.lisp;
 var lambda = lispster.lambda;
-var v = lispster.getVar;
+var v = lispster.v;
 
 describe("lisp examples", () => {
   it("should translate simple function calls", () => {
