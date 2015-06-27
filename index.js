@@ -21,7 +21,7 @@ function lispster(lisp, scope) {
 }
 exports.lisp = lispster;
 
-exports.lambda = {
+var lambda = {
   _lispster_macro: function createLambda(argNames, block) {
     var scope = {};
     Object.keys(this).forEach(function copyScope(key) {
@@ -38,7 +38,9 @@ exports.lambda = {
     };
   }
 };
+exports.lambda = lambda;
 
-exports.getVar = function getVar(varName) {
+function v(varName) {
   return this[varName];
 };
+exports.v = v;
