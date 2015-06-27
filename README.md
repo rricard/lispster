@@ -1,6 +1,6 @@
 # LISPster.js
 
-A JS-based LISP. Totally hipster shit.
+A JS-based LISP.
 
 ## Compatibility
 
