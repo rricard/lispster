@@ -1,0 +1,14 @@
+{
+  "name": "lispster.js",
+  "version": "0.1.0",
+  "description": "A JS-based LISP",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --harmony --harmony_arrow_functions ./node_modules/.bin/jest"
+  },
+  "author": "Robin Ricard",
+  "license": "MIT",
+  "devDependencies": {
+    "jest-cli": "^0.4.13"
+  }
+}
