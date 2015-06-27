@@ -16,18 +16,28 @@ Here is a stupid example while I find something smarter:
 
 ```js
 var lispster = require("lispster");
-var lisp = lispster.lisp;
+var lisp = lispster.lispster;
 var lambda = lispster.lambda;
 var v = lispster.v;
+var letVar = lispster.letVar;
 
 function add(a, b) {
   return a + b;
 }
 
-var myLispFunction = [lambda, ["x", "y"],
-                       [add, [v, "x"], [v, "y"]]];
+function mul(a, b) {
+  return a * b;
+}
 
-myLispFunction(1, 2); // => 3
+var myLispFunction = lisp(
+  [lambda, ["x", "y", "z"],
+    [letVar, {added: [add,
+                       [v, "x"],
+                       [v, "y"]]},
+      [mul, [v, "added"], [v, "z"]]]]
+);
+
+myLispFunction(1, 2, 3); // => 9
 ```
 
 Note that lispster is completely interoperable with JS.
